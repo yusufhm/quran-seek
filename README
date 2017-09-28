@@ -5,5 +5,5 @@ This web app seeks information from various sources to provide as much informati
 ```
 npm install
 cordova prepare
-cordova build
+gulp build
 ```
