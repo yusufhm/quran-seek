@@ -1,0 +1,5 @@
+# QuranSeek
+This web app seeks information from various sources to provide as much information as possible about Quranic verses.
+
+## Install
+```cordova platform add browser```
