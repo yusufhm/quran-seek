@@ -20,5 +20,10 @@
         "platforms": [
             "browser"
         ]
+    },
+    "devDependencies": {
+        "browser-sync": "^2.18.13",
+        "cordova-lib": "^7.0.1",
+        "gulp": "^3.9.1"
     }
 }
