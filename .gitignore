@@ -1,3 +1,4 @@
-platforms
+platforms/*
+!platforms/browser/manifest.webapp
 plugins
 css

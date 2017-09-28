@@ -4,17 +4,9 @@ var cordova = require("cordova-lib").cordova;
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 
-gulp.task('cordova-build', function(callback) {
-
-  cordova.build({
-    "platforms": ["browser"]
-  }, callback);
-
-});
-
 gulp.task('sass', function() {
 
-  return gulp.src('./www/sass/**/*.scss')
+  return gulp.src(['./www/sass/**/*.scss'])
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(sourcemaps.write('.'))
@@ -22,7 +14,15 @@ gulp.task('sass', function() {
 
 });
 
-gulp.task('build', ['sass', 'cordova-build']);
+gulp.task('cordova-build', ['sass'], function(callback) {
+
+  cordova.build({
+    "platforms": ["browser"]
+  }, callback);
+
+});
+
+gulp.task('build', ['cordova-build']);
 
 gulp.task('serve', function() {
 
